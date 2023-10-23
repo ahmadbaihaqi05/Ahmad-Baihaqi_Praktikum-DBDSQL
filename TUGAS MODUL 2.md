@@ -1,3 +1,5 @@
+create database PENJUALANDVD;
+
 use PENJUALANDVD;
 
 create table MOVIE(
