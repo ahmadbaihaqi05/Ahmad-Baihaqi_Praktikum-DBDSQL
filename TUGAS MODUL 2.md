@@ -41,6 +41,13 @@ create table PELANGGAN(
 	constraint chk_JENIS_KELAMIN check (JENIS_KELAMIN in ('P','L'))
 );
 
+create table KONTAK_PELANGGAN(
+	NO_HP VARCHAR(25) not null,
+	KODE_PELANGGAN VARCHAR(10) not null,
+	unique key (NO_HP),
+	foreign key (KODE_PELANGGAN) references PELANGGAN(KODE_PELANGGAN)
+)
+
 create table TRANSAKSI(
 	KODE_DVD VARCHAR(10)references MOVIE(KODE_DVD),
 	KODE_PELANGGAN VARCHAR(10)references PELANGGAN(KODE_PELANGGAN),
